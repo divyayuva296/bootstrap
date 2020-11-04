@@ -1,0 +1,29 @@
+<% if user_signed_in? %>
+	<div class="student-form">
+		<%if current_user.present? %>
+
+			<%= form_with( model: [@student],  local: true) do |form |%>
+				<p>
+					<%#= form.label :name ,class: "label"%><br>
+					<%= form.text_field :name, class: "name", placeholder: "name" %>
+				</p>
+				<p>
+					<%#= form.label :age, class: "label" %><br>
+					<%= form.select :age,(1..21).to_a.map{ |n| [n,n]}.insert(0,"select age")%>
+				</p>
+				<p>
+					<%#= form.label :subject, class: "label" %><br>
+					<%= form.text_field :subject , class: "name",placeholder: "subject"%>
+				</p>
+				<p>
+					<%= form.hidden_field :user_id, value: current_user.id %>
+				</p>
+				<p>
+					<%= form.submit "create student" , class: "student-button" %>
+					<button class="student-button"><%= link_to 'back', students_path %></button>
+				</p>
+
+			<% end %>
+		<% end %>
+	</div>
+<% end %>

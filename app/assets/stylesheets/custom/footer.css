@@ -1,0 +1,23 @@
+body {
+	background-image: url('log4.jpg');
+	height: 300px;
+
+}
+#footer{
+
+  
+    width: 1300px;
+    margin-left: -15px;
+
+   position: relative;
+    top: 110px;
+    background-color: #00ff89;
+    height: 108px;
+    
+}
+.col-md-6{
+	margin-top: 20px;
+}
+h5{
+	margin-top: 20px;
+}

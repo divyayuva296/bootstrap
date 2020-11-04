@@ -1,0 +1,47 @@
+.navbar{
+	background-color: #00ff89;
+    position: absolute;
+    top: 0px;
+    margin-left: -15px;
+    width: 1300px;
+}
+.logo{
+	height: 70px;
+	border-radius: 52%;
+}
+.navbar-nav{
+	margin-left: 950px;
+	font-weight: 20px;
+	background-color:  #9a5a42;
+}
+#navbardrop{
+	color: white;
+
+}
+
+
+/*#14756c;*/
+/*
+ #myTable {
+    border: none;
+  }
+  #myTable th {
+    cursor: pointer;
+    width: 5%;
+    border: none;
+    background-color: #e0e0e0;
+  }
+  #myTable tr td {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    text-align: center;
+  }
+  #myTable tr td:first-child {
+    cursor: pointer;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #aaa;
+    text-align: center;
+  }
+  #myTable tr:last-child td {
+    border: none;
+  }*/

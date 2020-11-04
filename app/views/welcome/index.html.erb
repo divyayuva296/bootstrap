@@ -1,0 +1,12 @@
+<% if user_signed_in? %>
+    <%#= link_to 'logout', destroy_user_session_path,method: :delete%>
+    <div class="index">
+    	<h1> welcome</h1>
+    	<% if user_signed_in? %>
+    		welcome <%= current_user.email %><br />
+    	<% end %>
+    	<button class="button"><%=link_to 'New Student',new_student_path %></button><br>
+    	<button class="button"><%=link_to 'Student',students_path %></button>
+    </div>
+
+<% end %>

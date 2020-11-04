@@ -1,0 +1,87 @@
+// Place all the styles related to the students controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.student-form{
+    position: relative;
+    top: 65px;
+	height: 330px;
+    background-color: #ff006a;
+    width: 462px;
+    text-align: center;
+    padding-top: 41px;
+    background-image: url('/assets/login2.jpg');
+    margin-left: 398px;
+    border-radius :10px;
+}
+.name{
+	border-radius: 5px;
+	padding: 5px;
+}
+
+select{
+   width: 217px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.student-button{
+        border-radius: 5px;
+    background-color: #a5e2df;
+    width: 134px;
+}
+.student-index{
+   
+   
+ 
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+ 
+  background-color: #c7f1f1a1;
+    border-radius :10px;
+   display: inline-block;
+    position: relative;
+    top: 50px;
+
+    width: 1200px;
+    margin-teft: 30px;
+    margin-left: 26px;
+}
+
+.th-index{
+   
+    text-transform: capitalize;
+    padding: 5px;
+}
+#table-index{
+    margin-top: 30px;
+    margin-left: 30px;
+    border: 2px solid #39a9bb;
+    border-collapse: collapse;
+    
+    width: 488px;
+}
+.title{
+    float: left;
+    margin-left: 30px;
+
+}
+tr:nth-child(even) {background: #62c8cc}
+tr:nth-child(odd) {background: #cdd0d4}
+
+
+.index-button{
+     border-radius: 5px;
+    background-color: #a5e2df;
+    width: 134px;
+}
+.search{
+    
+    width: 400px;
+    height: 60px;
+    padding-top: 15px;
+
+}
+
+
+
+

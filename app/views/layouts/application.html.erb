@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <div class="container-fluid" >
+      
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= render 'layouts/header' %>
+        <%= yield %>
+        <%= render 'layouts/footer'%>
+
+    </div>
+   
+
+    
+  </body>
+</html>
+<!-- style="background-image: url('/assets/log4.jpg');,height: 550px;position:absolute;" -->

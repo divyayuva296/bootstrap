@@ -1,0 +1,64 @@
+<div class="student-index">
+  <div class="search">
+    <!-- with form with -->
+    <%#= form_with url: students_path , method: :get do |form| %>
+      <%#= form.label(:search, "search ") %>
+      <%#= form.text_field(:search) %>
+      <%#= form.submit "search", class: "glyphicon glyphicon-search" %>
+    <%# end %>
+    <!-- with simple form -->
+      <%#= simple_form_for :search, url: students_path,method: "GET",html: {class: 'form-inline'} do |f| %>
+        <%#= f.input :name,input_html: {value: ""} %>
+        <%#=f.submit "search", class: "btn btn-primary" %><br />
+        <!-- <p> -->
+        <%#=radio_button_tag 'radio_input',"name" %>Name
+        <%#=radio_button_tag 'radio_input',"subject" %>Subject
+      <!-- </p> -->
+      <!-- <% end %> -->
+
+      <%= form_tag students_path, :method => 'get' do %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+           <%= submit_tag "Search", :name => nil %><br>
+           <%= radio_button_tag 'radio_input', 'name' %> Name 
+           <%= radio_button_tag 'radio_input', 'subject' %> Subject 
+
+
+        </p>
+      <% end %>
+      
+  </div>
+
+	<div>
+		<%= button_to "new" ,new_student_path, method: :get,class: "index-button" %>
+	</div>
+  <p class="title">Student Records</p><br>
+	
+		
+		
+
+		<table id="table-index">
+
+			<tr>
+				<th class="th-index" ><%#= link_to "name", :sort => "name" %><%= sortable "name"%></th>
+				<th class="th-index" ><%#= link_to "name, :sort => "name %>age</th>
+				<th class="th-index" ><%#= link_to "subject", :sort => "subject" %><%= sortable "subject" %></th>
+				<th class="th-index"></th>
+				<th class="th-index"></th>
+				<th class="th-index"></th>
+			</tr>
+      <% @students.each do |student| %>
+
+			 <tr>
+				  <td class="td-index"><%= student.name %></td>
+				  <td class="td-index"><%= student.age %></td>
+				  <td class="td-index"><%= student.subject %></td>
+				  <td><%= button_to "show", student_path(student), method: :get, class: "index-button"%></td>
+				  <td><%= button_to "edit", edit_student_path(student), method: :get, class: "index-button"%></td>
+				  <td><%= button_to "destroy", student_path(student), method: :delete, class: "index-button"%></td>
+				
+			 </tr>
+      <% end %>
+		</table>
+	
+</div>
