@@ -5,11 +5,6 @@ class StudentsController < ApplicationController
 	def index
 		@students = Student.all
 		@students = Student.order(sort_column + " " + sort_direction)
-		
-		
-		# @radio_input =Student.search(params[:radio_input])
-
-		
 		if params[:radio_input] == 'name'
 			@students = Student.search(params[:search])
 		elsif params[:radio_input] == 'subject'
@@ -18,7 +13,6 @@ class StudentsController < ApplicationController
 		else
 			Student.all
 		end
-		
 		# if params[:radio_input] == 'name'
 		
 		# 	@search = params[:search]
@@ -35,8 +29,7 @@ class StudentsController < ApplicationController
 		# 	end
 		# else
 		# 	Student.all
-		# end
-			
+		# end		
 	end
 
 	def new
