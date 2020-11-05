@@ -28,9 +28,9 @@
         <% if user_signed_in? %>
           <a href="#"><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "dropdown-item"%></a>
           <a href="#"><%= link_to 'Edit User', edit_user_registration_path, class: "dropdown-item" %></a>
-          <a class="dropdown-item" href="#"><%= link_to 'Change password', edit_user_password_path,class: "dropdown-item"%>_</a>
+          <a class="dropdown-item" href="#"><%= link_to 'Change password',  new_user_password_path(current_user),method: :get ,class: "dropdown-item"%></a>
         <% else %>
-          <a href="#"><%= link_to 'login', new_user_session_path , method: :delete, class: "dropdown-item"%></a>
+          <a href="#"><%= link_to 'login',  new_user_session_path , class: "dropdown-item"%></a>
           <a href="#"><%= link_to 'signup',   new_user_registration_path , class: "dropdown-item" %></a>
         <% end %>
 
